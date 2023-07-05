@@ -1,4 +1,58 @@
+.intro-area {
+  /* Handle index bar and intro text area */
+  display: flex;
+  flex-direction: column;
+}
+
+.index-bar {
+  background-color: rgb(56, 56, 56);
+
+  height: 80px;
+
+  /* Display index bar buttons in row */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.index-bar-button {
+  color:rgb(200, 212, 255);
+  /* background-color: blue; */
+  padding: 0px 35px;
+  margin: 0px 10px;
+  cursor: pointer;
+  
+  /* Display text in center */
+  display: flex;
+  align-items: center;
+}
+
+.index-bar-button:hover {
+  color: white;
+}
+
+.intro-text {
+  flex-grow: 15;
+
+  /* Display text in center */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 48;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 20;
+  color: white;
+}
+
 body {
+  background-color: rgb(42, 47, 60);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
