@@ -1,9 +1,9 @@
 
-import IndexBar from './IndexBar';
-import IntroText from './IntroText'
+import IndexBar from '../IndexBar';
+import IntroText from './HomeText'
 import { useState, useEffect } from 'react'
 
-const Intro = () => {
+const HomeSection = () => {
     const [introHeight, setIntroHeight] = useState(window.innerHeight)
 
     // SET INTRO SECTION SIZE
@@ -18,11 +18,11 @@ const Intro = () => {
       })
   
     return (
-    <div className='intro-area' style={{height: introHeight}}>
+    <div id='home-section' style={{height: introHeight}}>
         <IndexBar />
         <IntroText />
     </div>
   )
 }
 
-export default Intro
+export default HomeSection

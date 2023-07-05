@@ -1,18 +1,27 @@
 import PropTypes from 'prop-types'
 
-const IndexBarButton = ({ text }) => {
+const IndexBarButton = ({ index, text, targetId }) => {
     return (
-        <div className='index-bar-button'>{text}</div>
+        <a href={`#${targetId}`} className='index-bar-button'>
+            <span>
+                <sup>{`${index}`}</sup>
+            </span>
+            &nbsp;
+            {`// ${text}`}
+        </a>
     )
 }
 
 IndexBarButton.defaultProps = {
-    color: 'white'
+    text: 'DEFAULT',
+    color: 'white',
+    targetId: ''
 }
 
 IndexBarButton.propTypes = {
     text: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    targetId: PropTypes.string
 }
 
 export default IndexBarButton

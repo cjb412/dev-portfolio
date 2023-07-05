@@ -1,38 +1,77 @@
-.intro-area {
-  /* Handle index bar and intro text area */
+@font-face {
+  font-family: 'Roadway';
+  src: local('Roadway'), url(./fonts/Roadway.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DINMediumRegular';
+  src: local('DINMediumRegular'), url(./fonts/DINMediumRegular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'ITCAvantGardeGothicBold';
+  src: local('ITCAvantGardeGothicBold'), url(./fonts/ITCAvantGardeGothicBold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'ITCAvantGardeGothicBoldCondensed';
+  src: local('ITCAvantGardeGothicBoldCondensed'), url(./fonts/ITCAvantGardeGothicBoldCondensed.otf) format('opentype');
+}
+
+.App {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
 }
+
+.App > * {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------- INDEX BAR -------------------------- */
 
 .index-bar {
   background-color: rgb(56, 56, 56);
 
-  height: 80px;
+  height: 12%;
 
   /* Display index bar buttons in row */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  column-gap: 15px;
 }
 
 .index-bar-button {
+  text-decoration: none;
+  font-family: 'Roadway';
+  text-transform: uppercase;
   color:rgb(200, 212, 255);
-  /* background-color: blue; */
-  padding: 0px 35px;
-  margin: 0px 10px;
+  padding: 0px 5px;
   cursor: pointer;
+  max-width: 200px;
   
   /* Display text in center */
   display: flex;
   align-items: center;
-}
+  text-align: center;
+  }
 
 .index-bar-button:hover {
   color: white;
 }
 
-.intro-text {
+/* -------------------------- HOME SECTION -------------------------- */
+
+#home-section {
+  /* Handle index bar and intro text area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.home-text {
   flex-grow: 15;
+  width: 60%;
 
   /* Display text in center */
   display: flex;
@@ -40,19 +79,36 @@
   flex-direction: column;
 }
 
-h1 {
-  font-size: 48;
+.home-title {
+  font-size: 8vw;
+  font-family: 'ITCAvantGardeGothicBoldCondensed';
   color: white;
   margin: 0;
 }
 
-.subtitle {
-  font-size: 20;
+.home-subtitle {
+  font-size: 2vw;
+  font-family: 'ITCAvantGardeGothicBoldCondensed';
   color: white;
 }
 
+/* -------------------------- GENERIC STYLES -------------------------- */
+
+h2 {
+  font-size: 50pt;
+  margin: 0pt;
+  font-family: 'ITCAvantGardeGothicBoldCondensed';
+  color: white;
+}
+
+.subtle-text {
+  font-size: 20pt;
+  font-family: 'DINMediumRegular';
+  color: rgb(190, 190, 190);
+}
+
 body {
-  background-color: rgb(42, 47, 60);
+  background-color: rgb(39, 39, 39);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -64,4 +120,135 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* -------------------------- ABOUT SECTION -------------------------- */
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------- EXPERIENCE SECTION -------------------------- */
+
+#experience-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------- PROJECTS SECTION -------------------------- */
+
+#projects-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------- CONTACT SECTION -------------------------- */
+
+#contact-section {
+  margin: 40px;
+  padding: 50px 0px;
+  /*box-shadow: inset 0em 0em 4em rgba(0, 0, 0, 0.5);*/
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+#contact-section > * {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+#contact-section > .subtle-text {
+  max-width: 60%;
+}
+
+.email-bar {
+  height: 50px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  border-color: rgb(190, 190, 190);
+  color: rgb(190, 190, 190);
+
+  font-size: 20pt;
+  font-family: 'DINMediumRegular';
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-bar p {
+  padding: 0px 20px;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.email-bar div {
+  background-color: rgb(49, 49, 49);
+}
+
+.email-bar div img {
+  cursor: pointer;
+  max-width:40px;
+  max-height:40px;
+  padding: 5px;
+  vertical-align: middle;
+  filter:brightness(74.5%);
+}
+
+.email-bar div:hover {
+  background-color: rgb(96, 96, 96);
+}
+
+.email-bar div:hover img {
+  filter:brightness(100%);
+}
+
+.social-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-section > p {
+  padding-bottom: 20px;
+}
+
+.contact-site-button {
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.contact-site-button > img {
+  max-width:100%;
+  max-height:100%;
+  filter:brightness(74.5%);
+}
+
+.contact-site-button > p {
+  font-size: 20pt;
+  text-transform: uppercase;
+  font-family: 'DINMediumRegular';
+  color: rgb(190, 190, 190);
+}
+
+.contact-site-button:hover > img {
+  filter:brightness(100%);
+}
+
+.contact-site-button:hover > p {
+  color: white;
 }
