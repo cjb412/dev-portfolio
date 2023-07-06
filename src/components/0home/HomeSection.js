@@ -1,5 +1,3 @@
-
-import IndexBar from '../IndexBar';
 import IntroText from './HomeText'
 import { useState, useEffect } from 'react'
 
@@ -19,7 +17,6 @@ const HomeSection = () => {
   
     return (
     <div id='home-section' style={{height: introHeight}}>
-        <IndexBar />
         <IntroText />
     </div>
   )

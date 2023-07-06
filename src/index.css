@@ -1,11 +1,4 @@
-@font-face {
-  font-family: 'Roadway';
-  src: local('Roadway'), url(./fonts/Roadway.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'DINMediumRegular';
-  src: local('DINMediumRegular'), url(./fonts/DINMediumRegular.ttf) format('truetype');
-}
+/*
 @font-face {
   font-family: 'ITCAvantGardeGothicBold';
   src: local('ITCAvantGardeGothicBold'), url(./fonts/ITCAvantGardeGothicBold.otf) format('opentype');
@@ -14,12 +7,33 @@
   font-family: 'ITCAvantGardeGothicBoldCondensed';
   src: local('ITCAvantGardeGothicBoldCondensed'), url(./fonts/ITCAvantGardeGothicBoldCondensed.otf) format('opentype');
 }
-
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 50px;
+@font-face {
+  font-family: 'Univers67';
+  src: local('Univers67CnBold'), url(./fonts/Univers67CnBold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'UniversT49';
+  src: local('UniversLT49CnLightUltra'), url(./fonts/UniversLT49CnLightUltra.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaMedium';
+  src: local('Helvetica67MediumCondensed'), url(./fonts/Helvetica67MediumCondensed.otf) format('opentype');
+}
+@font-face {
+  font-family: 'KeepCalmMedium';
+  src: local('KeepCalmMedium'), url(./fonts/KeepCalmMedium.ttf) format('truetype');
+}*/
+@font-face {
+  font-family: 'MusticaProSemiBold';
+  src: local('MusticaProSemiBold'), url(./fonts/MusticaProSemiBold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Roadway';
+  src: local('Roadway'), url(./fonts/Roadway.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DINMediumRegular';
+  src: local('DINMediumRegular'), url(./fonts/DINMediumRegular.ttf) format('truetype');
 }
 
 .App > * {
@@ -29,20 +43,25 @@
 /* -------------------------- INDEX BAR -------------------------- */
 
 .index-bar {
-  background-color: rgb(56, 56, 56);
-
-  height: 12%;
+  width: 100%;
+  background-color: rgba(58, 165, 63, 0.231);
+  position: fixed;
+  top: 0;
 
   /* Display index bar buttons in row */
   display: flex;
   flex-direction: row;
   justify-content: center;
   column-gap: 15px;
+
+  height: 100px;
+
+  backdrop-filter: blur(10px);
 }
 
 .index-bar-button {
   text-decoration: none;
-  font-family: 'Roadway';
+  font-family: 'DINMediumRegular';
   text-transform: uppercase;
   color:rgb(200, 212, 255);
   padding: 0px 5px;
@@ -59,45 +78,12 @@
   color: white;
 }
 
-/* -------------------------- HOME SECTION -------------------------- */
-
-#home-section {
-  /* Handle index bar and intro text area */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.home-text {
-  flex-grow: 15;
-  width: 60%;
-
-  /* Display text in center */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.home-title {
-  font-size: 8vw;
-  font-family: 'ITCAvantGardeGothicBoldCondensed';
-  color: white;
-  margin: 0;
-}
-
-.home-subtitle {
-  font-size: 2vw;
-  font-family: 'ITCAvantGardeGothicBoldCondensed';
-  color: white;
-}
-
 /* -------------------------- GENERIC STYLES -------------------------- */
 
 h2 {
   font-size: 50pt;
   margin: 0pt;
-  font-family: 'ITCAvantGardeGothicBoldCondensed';
+  font-family: 'MusticaProSemiBold';
   color: white;
 }
 
@@ -120,6 +106,75 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* -------------------------- SECTION CONTAINER -------------------------- */
+
+.section-container {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------------------------- HOME SECTION -------------------------- */
+
+#home-section {
+  /* Handle index bar and intro text area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  background-color: rgba(255, 0, 157, 0.1);
+}
+
+.home-text {
+  min-width: 600px;
+  width: 60%;
+
+  /* Display text in center */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.home-first-name {
+  font-size: 108pt;
+  font-family: 'MusticaProSemiBold';
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding-left: 16px;
+  letter-spacing: 15px;
+
+  /* background-color: rgba(0, 255, 255, 0.327); */
+}
+
+.home-last-name {
+  font-size: 108pt;
+  font-family: 'MusticaProSemiBold';
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  letter-spacing: 4px;
+
+  /* background-color: rgba(0, 255, 255, 0.327); */
+}
+
+.home-subtitle {
+  font-size: 16pt;
+  font-family: 'Roadway';
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+
+  /* background-color: rgba(0, 255, 255, 0.327); */
 }
 
 /* -------------------------- ABOUT SECTION -------------------------- */
