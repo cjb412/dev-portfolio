@@ -4,7 +4,7 @@ import p1 from "../../graphics/project_thumbnail/p1.png"
 
 const ProjectList = ({projects}) => {
   const [projectCollection, setProjects] = useState(projects)
-  const [listingWidth, setListWidth] = useState(0)
+  const [listingHeight, setListHeight] = useState(0)
   
   // UPDATE FOR NEW PROJECT COLLECTION
   useEffect(() => {
@@ -12,17 +12,17 @@ const ProjectList = ({projects}) => {
     
     if(projectCollection.length > 2)
     {
-        setListWidth(1200)
+        //setListWidth(1200)
     }
     else
     {
-        setListWidth(400*projectCollection.length)
+        //setListWidth(400*projectCollection.length)
     }
     
-  },[projectCollection]) // <-- here put the parameter to listen
+  },[projectCollection])
 
   return (
-    <div className='project-list' style={{width: `${listingWidth}px`}}>
+    <div className='project-list'>
         {projectCollection.map((project) => (
             <ProjectBlock key={project} projectID={project} thumbnailSrc={p1}/>
         ))}

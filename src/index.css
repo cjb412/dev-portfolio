@@ -36,15 +36,12 @@
   src: local('DINMediumRegular'), url(./fonts/DINMediumRegular.ttf) format('truetype');
 }
 
-.App > * {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 /* -------------------------- INDEX BAR -------------------------- */
 
 .index-bar {
+  /* Fixed */
   width: 100%;
-  background-color: rgba(58, 165, 63, 0.231);
+  height: 100px;
   position: fixed;
   top: 0;
 
@@ -54,16 +51,14 @@
   justify-content: center;
   column-gap: 15px;
 
-  height: 100px;
-
-  backdrop-filter: blur(10px);
+  /* Blur */
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .index-bar-button {
   text-decoration: none;
-  font-family: 'DINMediumRegular';
-  text-transform: uppercase;
-  color:rgb(200, 212, 255);
+  
   padding: 0px 5px;
   cursor: pointer;
   max-width: 200px;
@@ -72,13 +67,19 @@
   display: flex;
   align-items: center;
   text-align: center;
-  }
+}
 
 .index-bar-button:hover {
   color: white;
 }
 
 /* -------------------------- GENERIC STYLES -------------------------- */
+
+body {
+  background-color: rgb(39, 39, 39);
+  margin: 0 auto;
+  transform-origin: top;
+}
 
 h2 {
   font-size: 50pt;
@@ -87,25 +88,44 @@ h2 {
   color: white;
 }
 
-.subtle-text {
+.index-font {
+  font-family: 'DINMediumRegular';
+  text-transform: uppercase;
+  color:rgb(120, 179, 201);
+  text-shadow: 1px 1px black;
+}
+
+.name-font {
+  font-size: 108pt;
+  font-family: 'MusticaProSemiBold';
+  margin: 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.subtitle-font {
+  font-size: 16pt;
+  font-family: 'Roadway';
+  text-transform: uppercase;
+  color: white;
+}
+
+.subtle-font {
   font-size: 20pt;
   font-family: 'DINMediumRegular';
   color: rgb(190, 190, 190);
 }
 
-body {
-  background-color: rgb(39, 39, 39);
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.project-title-font {
+  font-size: 24pt;
+  font-family: 'DINMediumRegular';
+  color: rgb(255, 255, 255);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.project-category-font {
+  font-size: 14pt;
+  font-family: 'DINMediumRegular';
+  color: rgb(255, 255, 255);
 }
 
 /* -------------------------- SECTION CONTAINER -------------------------- */
@@ -113,7 +133,8 @@ code {
 .section-container {
   position: absolute;
   top: 0;
-
+  width: 100%;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +142,11 @@ code {
 }
 
 .section-container > * {
-  background-color: rgba(255, 127, 80, 0.2);
+  width: 80%;
+}
+
+.section-container > div > .subtle-font {
+  padding: 0px 10%;
 }
 
 /* -------------------------- HOME SECTION -------------------------- */
@@ -144,40 +169,22 @@ code {
   justify-content: center;
   flex-direction: column;
 
-  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .home-first-name {
-  font-size: 108pt;
-  font-family: 'MusticaProSemiBold';
-  text-transform: uppercase;
-  color: white;
-  margin: 0;
+  /* letter spacing */
   padding-left: 16px;
   letter-spacing: 15px;
-
-  /* background-color: rgba(0, 255, 255, 0.327); */
 }
 
 .home-last-name {
-  font-size: 108pt;
-  font-family: 'MusticaProSemiBold';
-  text-transform: uppercase;
-  color: white;
-  margin: 0;
+  /* letter spacing */
   letter-spacing: 4px;
-
-  /* background-color: rgba(0, 255, 255, 0.327); */
 }
 
 .home-subtitle {
-  font-size: 16pt;
-  font-family: 'Roadway';
-  text-transform: uppercase;
-  color: white;
+  /* letter spacing */
   letter-spacing: 2px;
-
-  /* background-color: rgba(0, 255, 255, 0.327); */
 }
 
 /* -------------------------- ABOUT SECTION -------------------------- */
@@ -197,9 +204,6 @@ code {
 /* -------------------------- PROJECTS SECTION -------------------------- */
 
 #projects-section {
-  margin: 40px;
-  padding: 50px 0px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,46 +211,44 @@ code {
   row-gap: 25px;
 }
 
-#projects-section > .subtle-text
-{
-  max-width: 60%;
-}
-
 .project-list{
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 
-  background-color: rgba(43, 226, 98, 0.5);
+  max-width: 1600px;
 }
 
-.project-block {
-  width: 370px;
-  height: 370px;
-  padding: 15px;
-
+.project-block-padding {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: 5%;
 
   border-radius: 8px;
-
-  background-color: rgba(137, 43, 226, 0.5);
 }
 
 .project-block-picture {
   overflow: hidden;
   border-radius: 8px 8px 0px 0px;
 
-
   width: 100%;
-  height: 60%;
-  background-color: rgba(38, 233, 226, 0.5);
+  height: 70%;
 }
 
-.project-block-picture > img {
+.project-block-picture-shadow {
+  width: 110%;
+  height: 100%;
+  box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-block-picture-shadow > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: -2;
 }
 
 .project-block-caption-area {
@@ -254,24 +256,30 @@ code {
   border-radius: 0px 0px 8px 8px;
   width: 100%;
   height: 40%;
-  background-color: rgba(205, 226, 43, 0.5);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  background-color: rgb(65, 65, 65);
 }
 
+.project-block-title {
+  width: 100%;
+}
+
+.project-block-category {
+  width: 100%;
+}
 /* -------------------------- CONTACT SECTION -------------------------- */
 
 #contact-section {
-  margin: 40px;
-  padding: 50px 0px;
   /*box-shadow: inset 0em 0em 4em rgba(0, 0, 0, 0.5);*/
 
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-}
-
-#contact-section > * {
-  background-color: rgba(0, 128, 0, 0.1);
 }
 
 #contact-section > .subtle-text {
@@ -336,7 +344,6 @@ code {
 
 .contact-site-button {
   height: 50px;
-  width: 200px;
   padding: 10px;
 
   display: flex;
@@ -366,3 +373,58 @@ code {
 .contact-site-button:hover > p {
   color: white;
 }
+
+/* -- DEBUG -- */
+
+/* 
+.index-bar {
+  background-color: rgba(58, 165, 63, 0.231);
+}
+
+.section-container > * {
+  background-color: rgba(255, 127, 80, 0.2);
+}
+
+.section-container > div > .subtle-font {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+.home-text {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.project-list{
+  background-color: rgba(43, 226, 98, 0.2);
+}
+
+.project-block {
+  background-color: rgba(43, 46, 226, 0.2);
+}
+
+.project-block-padding {
+  background-color: rgba(137, 43, 226, 0.2);
+}
+
+.project-block-picture {
+  background-color: rgba(38, 233, 226, 0.2);
+}
+
+.project-block-caption-area {
+  background-color: rgba(205, 226, 43, 0.2);
+}
+
+.project-block-title {
+  background-color: rgba(138, 255, 127, 0.2);
+}
+
+.project-block-category {
+  background-color: rgba(127, 255, 212, 0.2);
+}
+
+.project-block-description {
+  background-color: rgba(184, 180, 255, 0.2);
+}
+
+#contact-section > * {
+  background-color: rgba(0, 128, 0, 0.1);
+} */

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const IndexBarButton = ({ index, text, targetId }) => {
     return (
-        <a href={`#${targetId}`} className='index-bar-button'>
+        <a href={`#${targetId}`} className='index-bar-button index-font'>
             <span>
                 <sup>{`${index}`}</sup>
             </span>
