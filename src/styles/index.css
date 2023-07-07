@@ -70,6 +70,15 @@ h2 {
   color: rgb(190, 190, 190);
 }
 
+#home-section {
+  /* Handle index bar and intro text area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 #about-section {
   display: flex;
   flex-direction: column;
