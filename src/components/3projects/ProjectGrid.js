@@ -1,36 +1,29 @@
-import { useState, useEffect } from "react"
 import ProjectBlock from "./ProjectBlock"
 import p1 from "../../graphics/project_thumbnail/p1.png"
 import styles from '../../styles/ProjectGrid.module.scss'
+import PropTypes from 'prop-types'
 
-const ProjectGrid = ({projects}) => {
-  const [projectCollection, setProjects] = useState(projects)
-  const [listingHeight, setListHeight] = useState(0)
-  
-  // UPDATE FOR NEW PROJECT COLLECTION
-  useEffect(() => {
-    console.log(`${projectCollection}` + '- Has changed')
-    
-    if(projectCollection.length > 2)
-    {
-        //setListWidth(1200)
-    }
-    else
-    {
-        //setListWidth(400*projectCollection.length)
-    }
-    
-  },[projectCollection])
-
+const ProjectGrid = ({projects, projectWidth, gridPadding}) => {
   return (
-    <div className={styles['project-grid']}>
-        {projectCollection.map((project) => (
-            <ProjectBlock key={project} projectID={project} thumbnailSrc={p1}/>
+    <div className={styles['project-grid']} style={{gridTemplateColumns: `repeat(auto-fit, ${projectWidth})`, columnGap: `${gridPadding}`, rowGap: `${gridPadding}`}}>
+        {projects.map((project) => (
+          <ProjectBlock key={project} projectID={project} thumbnailSrc={p1} width={`${projectWidth}`} height={`${projectWidth}`}/>
         ))}
     </div>
   )
 }
 
+ProjectGrid.defaultProps = {
+  projects: [],
+  projectWidth: '700px',
+  gridPadding: '100px',
+}
+
+ProjectGrid.propTypes = {
+  projects: PropTypes.array,
+  projectWidth: PropTypes.string,
+  gridPadding: PropTypes.string,
+}
 
 
 export default ProjectGrid

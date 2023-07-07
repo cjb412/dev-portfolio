@@ -4,16 +4,16 @@
     justify-content: center;
     aspect-ratio: 1;
   
-    border-radius: 8px;
+    border-radius: 2px;
+    overflow: hidden;
     background-color: rgba(255, 0, 0, 0);
 }
 
 .thumbnail-area {
     overflow: hidden;
-    border-radius: 8px 8px 0px 0px;
   
     width: 100%;
-    height: 70%;
+    height: 60%;
 
     /* Gradient shadow along bottom */
     box-shadow: inset 0 -15px 25px -10px rgba(0, 0, 0, 0.7);
@@ -28,13 +28,10 @@
 }
 
 .caption-area {
-    overflow: hidden;
-    border-radius: 0px 0px 8px 8px;
     width: 100%;
     height: 40%;
 
     /* Interior padding */
-    padding: 0 5%;
     box-sizing: border-box;
   
     display: flex;
@@ -53,23 +50,43 @@
 
     /* alignment */
     text-align: left;
+    padding-bottom: 5px;
 
     /* wrapping handling */
-    word-break: break-all;
-    background-color: rgba(255, 0, 0, 0.2);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
   
 .category {
     /* font */
     font-size: 14pt;
     font-family: 'DINMediumRegular';
-    color: rgb(255, 255, 255);
+    color: rgb(190, 190, 190);
 
     /* alignment */
     text-align: left;
 
     /* wrapping handling */
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: rgba(255, 0, 0, 0.2);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    /* wrapping handling 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; */
+}
+
+.project-block:hover {
+    .thumbnail-area {
+        height: 0%;
+    }
+
+    .caption-area {
+        height: 100%;
+    }
 }

@@ -2,7 +2,7 @@ import useState from 'react'
 import styles from '../../styles/EmailBar.module.scss'
 import PropTypes from 'prop-types'
 
-const EmailBar = ({barHeight, email, mailIcon, copyIcon}) => {
+const EmailBar = ({email, mailIcon, copyIcon, barHeight, buttonAspectRatio}) => {
     // COPY EMAIL ON BUTTON CLICK
     const writeEmailToClipboard = () => {
         navigator.clipboard.writeText(`${email}`)
@@ -16,13 +16,13 @@ const EmailBar = ({barHeight, email, mailIcon, copyIcon}) => {
         </div>
 
         <div className={styles["icons"]}>
-            <div className={styles["icon-container"]}>
+            <div className={styles["icon-container"]} style={{aspectRatio: Math.max(1, buttonAspectRatio)}}>
                 <a href={`mailto:${email}`}>
                     <img className={styles["icon"]} alt='mailIcon' src={mailIcon}></img>
                 </a>
             </div>
 
-            <div className={styles["icon-container"]}>
+            <div className={styles["icon-container"]} style={{aspectRatio: Math.max(1, buttonAspectRatio)}}>
                 <img className={styles["icon"]} alt='copyIcon' src={copyIcon} onClick={writeEmailToClipboard}></img>
             </div>
         </div>
@@ -31,13 +31,21 @@ const EmailBar = ({barHeight, email, mailIcon, copyIcon}) => {
 }
 
 EmailBar.defaultProps = {
-    barHeight: 50,
-    email: ''
+    email: '',
+    mailIcon: '',
+    copyIcon: '',
+    
+    barHeight: '50px',
+    buttonAspectRatio: 1,
 }
 
 EmailBar.propTypes = {
-    barHeight: PropTypes.number,
-    email: PropTypes.string
+    email: PropTypes.string,
+    mailIcon: PropTypes.string,
+    copyIcon: PropTypes.string,
+    
+    barHeight: PropTypes.string,
+    buttonAspectRatio: PropTypes.number,
 }
 
 export default EmailBar

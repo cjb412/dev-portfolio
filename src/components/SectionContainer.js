@@ -10,7 +10,7 @@ const SectionContainer = () => {
         <HomeSection />
         {/*<AboutSection />
         <ExperienceSection /> */}
-        <ProjectsSection />
+        <ProjectsSection setProjectSectionWidth={() => {}}/>
         <ContactSection />
     </div>
   )

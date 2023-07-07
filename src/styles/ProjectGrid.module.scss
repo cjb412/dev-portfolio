@@ -1,9 +1,10 @@
 
 .project-grid{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  
-    max-width: 1600px;
-  }
+  display: grid;
+
+  /* center grid cells, accounting for padding */
+  justify-content: center;
+
+  width: 100%;
+}
   
