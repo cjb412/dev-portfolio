@@ -14,7 +14,7 @@ const HomeSection = () => {
         }
     
         window.addEventListener('resize', handleResize)
-      })
+    })
   
     return (
     <div id={styles['home-section']} style={{height: introHeight}}>

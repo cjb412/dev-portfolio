@@ -1,3 +1,4 @@
+import useState from 'react'
 import styles from '../../styles/EmailBar.module.scss'
 import PropTypes from 'prop-types'
 
@@ -14,14 +15,16 @@ const EmailBar = ({barHeight, email, mailIcon, copyIcon}) => {
             <p>{email}</p>
         </div>
 
-        <div className={styles["icon-container"]}>
-            <a href={`mailto:${email}`}>
-                <img className={styles["icon"]} alt='mailIcon' src={mailIcon}></img>
-            </a>
-        </div>
+        <div className={styles["icons"]}>
+            <div className={styles["icon-container"]}>
+                <a href={`mailto:${email}`}>
+                    <img className={styles["icon"]} alt='mailIcon' src={mailIcon}></img>
+                </a>
+            </div>
 
-        <div className={styles["icon-container"]}>
-            <img className={styles["icon"]} alt='copyIcon' src={copyIcon} onClick={writeEmailToClipboard}></img>
+            <div className={styles["icon-container"]}>
+                <img className={styles["icon"]} alt='copyIcon' src={copyIcon} onClick={writeEmailToClipboard}></img>
+            </div>
         </div>
     </div>
     )
