@@ -1,19 +1,15 @@
 import styles from '../../styles/ProjectBlock.module.scss'
 import PropTypes from 'prop-types'
 
-const ProjectBlock = ({projectID, title, desc, thumbnailSrc, columnCount, rowCount}) => {
+const ProjectBlock = ({title, thumbnailSrc, width, height, relativeX, relativeY}) => {
     return (
-        <div className={styles['project-block']} style={{width: `${100.0/columnCount}%`}}>
-            <div className={styles['project-block-padding']}>
-                <div className={styles['project-block-picture']}>
-                    <div className={styles['project-block-picture-shadow']}>
-                        <img src={thumbnailSrc} alt={`${title} - Thumbnail`}></img>
-                    </div>
-                </div>
-                <div className={styles['project-block-caption-area']}>
-                    <div className={styles['project-block-title project-title-font']}>{title}</div>
-                    <div className={styles['project-block-category project-category-font']}>{title}</div>
-                </div>
+        <div className={styles['project-block']} style={{width: width, height: height}}>
+            <div className={styles['thumbnail-area']}>
+                <img src={thumbnailSrc} alt={`${title} - Thumbnail`}></img>
+            </div>
+            <div className={styles['caption-area']}>
+                <div className={styles['title']}>{title}</div>
+                <div className={styles['category']}>{title}</div>
             </div>
         </div>
     )
@@ -21,21 +17,17 @@ const ProjectBlock = ({projectID, title, desc, thumbnailSrc, columnCount, rowCou
 
 
 ProjectBlock.defaultProps = {
-    projectID: 0,
     title: 'Untitled Project',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     thumbnailSrc: '',
-    columnCount: 3,
-    rowCount: 2
+    width: 400,
+    height: 400
 }
 
 ProjectBlock.propTypes = {
-    projectID: PropTypes.number,
     title: PropTypes.string,
     desc: PropTypes.string,
-    thumbnailSrc: PropTypes.string,
-    columnCount: PropTypes.number,
-    rowCount: PropTypes.number
+    thumbnailSrc: PropTypes.string
 }
 
 export default ProjectBlock

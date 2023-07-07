@@ -70,21 +70,15 @@ h2 {
   color: rgb(190, 190, 190);
 }
 
-/* -------------------------- ABOUT SECTION -------------------------- */
-
 #about-section {
   display: flex;
   flex-direction: column;
 }
 
-/* -------------------------- EXPERIENCE SECTION -------------------------- */
-
 #experience-section {
   display: flex;
   flex-direction: column;
 }
-
-/* -------------------------- PROJECTS SECTION -------------------------- */
 
 #projects-section {
   display: flex;
@@ -94,10 +88,13 @@ h2 {
   row-gap: 25px;
 }
 
-.project-list{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+#contact-section {
+  /* element spacing */
+  row-gap: 50px;
+  margin-bottom: 50px;
 
-  max-width: 1600px;
+  /* element positioning (flexbox) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

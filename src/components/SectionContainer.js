@@ -9,8 +9,8 @@ const SectionContainer = () => {
     <div className='section-container'>
         <HomeSection />
         {/*<AboutSection />
-        <ExperienceSection />
-        <ProjectsSection /> */}
+        <ExperienceSection /> */}
+        <ProjectsSection />
         <ContactSection />
     </div>
   )

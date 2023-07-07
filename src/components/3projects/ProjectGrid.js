@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 import ProjectBlock from "./ProjectBlock"
 import p1 from "../../graphics/project_thumbnail/p1.png"
+import styles from '../../styles/ProjectGrid.module.scss'
 
-const ProjectList = ({projects}) => {
+const ProjectGrid = ({projects}) => {
   const [projectCollection, setProjects] = useState(projects)
   const [listingHeight, setListHeight] = useState(0)
   
@@ -22,7 +23,7 @@ const ProjectList = ({projects}) => {
   },[projectCollection])
 
   return (
-    <div className='project-list'>
+    <div className={styles['project-grid']}>
         {projectCollection.map((project) => (
             <ProjectBlock key={project} projectID={project} thumbnailSrc={p1}/>
         ))}
@@ -32,4 +33,4 @@ const ProjectList = ({projects}) => {
 
 
 
-export default ProjectList
+export default ProjectGrid

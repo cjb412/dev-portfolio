@@ -10,7 +10,7 @@ import gitLogo from '../../graphics/github_icon.png'
 
 const ContactSection = () => {
   return (
-    <div id={styles["contact-section"]}>
+    <div id="contact-section">
 
         <h2>Contact</h2>
         
