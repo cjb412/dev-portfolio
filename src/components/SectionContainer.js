@@ -8,9 +8,9 @@ const SectionContainer = () => {
   return (
     <div className='section-container'>
         <HomeSection />
-        <AboutSection />
+        {/*<AboutSection />
         <ExperienceSection />
-        <ProjectsSection />
+        <ProjectsSection /> */}
         <ContactSection />
     </div>
   )

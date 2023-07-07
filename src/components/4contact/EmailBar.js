@@ -5,13 +5,15 @@ const EmailBar = ({email, mailIcon, copyIcon}) => {
     }
 
     return (
-    <div className='email-bar'>
-        <p>{email}</p>
-        <a href={`mailto:${email}`}>
-            <div>
+    <div className='email-bar subtle-font'>
+        <div className='email-entry'>
+            <p>{email}</p>
+        </div>
+        <div>
+            <a href={`mailto:${email}`}>
                 <img alt='mailIcon' src={mailIcon}></img>
-            </div>
-        </a>
+            </a>
+        </div>
         <div>
             <img alt='copyIcon' src={copyIcon} onClick={writeEmailToClipboard}></img>
         </div>
