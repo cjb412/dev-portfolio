@@ -1,4 +1,3 @@
-import useState from 'react'
 import styles from '../../styles/EmailBar.module.scss'
 import PropTypes from 'prop-types'
 

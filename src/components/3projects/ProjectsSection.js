@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import ProjectGrid from "./ProjectGrid"
 
 const ProjectsSection = () => {
