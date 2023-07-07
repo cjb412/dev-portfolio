@@ -1,7 +1,7 @@
 import styles from '../../styles/EmailBar.module.scss'
 import PropTypes from 'prop-types'
 
-const EmailBar = ({email, mailIcon, copyIcon, barHeight, buttonAspectRatio}) => {
+const EmailBar = ({email, barHeight, buttonAspectRatio, mailIcon, copyIcon }) => {
     // COPY EMAIL ON BUTTON CLICK
     const writeEmailToClipboard = () => {
         navigator.clipboard.writeText(`${email}`)
