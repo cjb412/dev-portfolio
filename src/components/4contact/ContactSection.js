@@ -1,3 +1,5 @@
+import styles from '../../styles/ContactSection.module.scss'
+
 import EmailBar from './EmailBar'
 import emailIcon from '../../graphics/email_icon.png'
 import copyIcon from '../../graphics/copy_icon.png'
@@ -8,20 +10,20 @@ import gitLogo from '../../graphics/github_icon.png'
 
 const ContactSection = () => {
   return (
-    <div id="contact-section">
+    <div id={styles["contact-section"]}>
 
         <h2>Contact</h2>
         
-        <div className="subtle-font">
+        <div className={styles["body-text"]}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Commodo nulla facilisi nullam vehicula ipsum a arcu. Quam vulputate dignissim suspendisse in. Nisi lacus sed viverra tellus in hac habitasse.
         </div>
 
         <EmailBar email='cdfcblank@gmail.com' mailIcon={emailIcon} copyIcon={copyIcon}/>
 
-        <div className="social-media-section">
+        <div className={styles["social-media-subsection"]}>
 
-          <p className="subtle-font">
+          <p className={styles["body-text"]}>
               You can also visit me on social media:
           </p>
 

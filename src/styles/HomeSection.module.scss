@@ -1,0 +1,31 @@
+.home-name {
+    font-size: min(108pt, 16vw);
+    font-family: 'MusticaProSemiBold';
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+}
+  
+.home-subtitle {
+    font-size: min(20pt, 3vw);
+    letter-spacing: 0.175vw;
+    font-family: 'Roadway';
+    text-transform: uppercase;
+    color: white;
+}
+
+#home-section {
+    /* Handle index bar and intro text area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.home-text {
+    /* Display text in center */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+  

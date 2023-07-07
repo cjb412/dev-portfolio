@@ -1,6 +1,5 @@
-//import { useEffect } from 'react'
-import './App.css';
-import IndexBar from './components/IndexBar';
+import './styles/App.css';
+import IndexBar from './components/index/IndexBar';
 import SectionContainer from './components/SectionContainer';
 
 const App = () => {

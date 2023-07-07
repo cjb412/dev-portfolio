@@ -1,9 +1,11 @@
+import styles from '../../styles/HomeSection.module.scss'
+
 const IntroText = () => {
   return (
-    <div className='home-text'>
-        <h1 className='home-first-name name-font'>Chris</h1>
-        <h1 className='home-last-name name-font'>Blank</h1>
-        <p className='home-subtitle subtitle-font'>Software Engineer, Full Stack Developer, Game Dev Hobbyist</p>
+    <div className={styles['home-text']}>
+        <h1 className={styles['home-name']}>Chris</h1>
+        <h1 className={styles['home-name']}>Blank</h1>
+        <p className={styles['home-subtitle']}>Software Engineer, Full Stack Developer, Game Dev Hobbyist</p>
     </div>
   )
 }

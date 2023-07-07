@@ -1,13 +1,11 @@
+import styles from "../../styles/IndexBar.module.scss"
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 
 const IndexBarButton = ({ index, text, targetId }) => {
     return (
-        <a href={`#${targetId}`} className='index-bar-button index-font'>
-            <span>
-                <sup>{`${index}`}</sup>
-            </span>
-            &nbsp;
-            {`// ${text}`}
+        <a href={`#${targetId}`} className={cx(styles['index-button'], styles['index-font'])}>
+            <span><sup>{`${index}`}</sup></span>&nbsp;{`// ${text}`}
         </a>
     )
 }
