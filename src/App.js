@@ -55,7 +55,7 @@ const App = () => {
               Commodo nulla facilisi nullam vehicula ipsum a arcu. Quam vulputate dignissim suspendisse in. Nisi lacus sed viverra tellus in hac habitasse.
           </div>
 
-          <ProjectGrid projects={['1', '2', '3', '5', '7']} projectWidth={'min(90lvw, 600px)'} gridPadding={'min(22.5lvw, 150px)'} projectCategoryFont={'project-category-font'} projectTitleFont={'project-title-font'}/>
+          <ProjectGrid projects={['1', '2', '3', '5', '7']} projectWidth={'min(90lvw, 600px)'} gridPadding={'min(22.5lvw, 150px)'} projectTitleFont={'project-title-font'} projectCategoryFont={'project-category-font'} projectTechnologiesFont={'project-technologies-font'}/>
 
         </div>
 

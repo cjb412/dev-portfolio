@@ -32,21 +32,19 @@
     height: 40%;
 
     /* Interior padding */
+    padding: 0 5%;
     box-sizing: border-box;
   
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: stretch;
+    row-gap: 5%;
   
     background-color: rgb(65, 65, 65);
 }
   
 .title {
-    /* alignment */
-    text-align: left;
-    padding-bottom: 5px;
-
     /* wrapping handling */
     overflow: hidden;
     white-space: nowrap;
@@ -54,9 +52,6 @@
 }
   
 .category {
-    /* alignment */
-    text-align: left;
-
     /* wrapping handling */
     overflow: hidden;
     white-space: nowrap;
@@ -71,12 +66,27 @@
     text-overflow: ellipsis; */
 }
 
-.project-block:hover {
-    .thumbnail-area {
-        height: 0%;
-    }
+.technologies {
+    /* Adding a margin because I think it looks better */
+    margin-top: 5%;
 
-    .caption-area {
-        height: 100%;
-    }
+    /* Spacing technologies */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    /* wrapping handling */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Individual technology colors */
+
+.techA {
+    color: green;
+}
+
+.techB {
+    color: orange;
 }
