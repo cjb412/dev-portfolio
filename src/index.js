@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './styles/global-fonts.css';
+import './styles/global-fonts.scss';
 import './styles/global.scss';
-import './styles/debug.css';
+import './styles/debug.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

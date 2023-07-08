@@ -38,7 +38,7 @@
 }
 
 .index-font {
-    font-size: 2vw;
+    font-size: min(2vw, 20px);
     font-family: 'DINMediumRegular';
     text-transform: uppercase;
     color: rgb(210, 210, 210);
