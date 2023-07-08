@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dev-portfolio/static/css/main.077afce0.css",
-    "main.js": "/dev-portfolio/static/js/main.b6ad8fae.js",
+    "main.css": "/dev-portfolio/static/css/main.47741060.css",
+    "main.js": "/dev-portfolio/static/js/main.efa4000e.js",
     "static/js/787.eef0f175.chunk.js": "/dev-portfolio/static/js/787.eef0f175.chunk.js",
     "static/media/MusticaProSemiBold.otf": "/dev-portfolio/static/media/MusticaProSemiBold.b1a800b42a1c7df2493c.otf",
     "static/media/Roadway.ttf": "/dev-portfolio/static/media/Roadway.05182510aa74937fccc5.ttf",
     "static/media/DINMediumRegular.ttf": "/dev-portfolio/static/media/DINMediumRegular.ac50005d97791c65cf3e.ttf",
     "static/media/p1.png": "/dev-portfolio/static/media/p1.1c608fff9ac3df88e4cb.png",
     "index.html": "/dev-portfolio/index.html",
-    "main.077afce0.css.map": "/dev-portfolio/static/css/main.077afce0.css.map",
-    "main.b6ad8fae.js.map": "/dev-portfolio/static/js/main.b6ad8fae.js.map",
+    "main.47741060.css.map": "/dev-portfolio/static/css/main.47741060.css.map",
+    "main.efa4000e.js.map": "/dev-portfolio/static/js/main.efa4000e.js.map",
     "787.eef0f175.chunk.js.map": "/dev-portfolio/static/js/787.eef0f175.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.077afce0.css",
-    "static/js/main.b6ad8fae.js"
+    "static/css/main.47741060.css",
+    "static/js/main.efa4000e.js"
   ]
 }
