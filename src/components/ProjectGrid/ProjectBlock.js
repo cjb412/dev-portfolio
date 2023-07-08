@@ -1,21 +1,22 @@
-import styles from '../../styles/ProjectBlock.module.scss'
+import styles from './ProjectBlock.module.scss'
 import PropTypes from 'prop-types'
 
-const ProjectBlock = ({title, category, thumbnailSrc, width, height, padding}) => {
+import cx from 'classnames'
+
+const ProjectBlock = ({title, category, thumbnailSrc, width, height, padding, titleFont, categoryFont}) => {
     return (
         
         <div className={styles['project-block']} style={{width: width, height: height}}>
             <div className={styles['thumbnail-area']}>
                 <img src={thumbnailSrc} alt={`${title} - Thumbnail`}></img>
             </div>
-            <div className={styles['caption-area']} style={{padding: `${padding}`}}>
-                <div className={styles['title']} >{title}</div>
-                <div className={styles['category']}>{category}</div>
+            <div className={styles['caption-area']} style={{padding: padding}}>
+                <div className={cx(styles['title'], titleFont)} >{title}</div>
+                <div className={cx(styles['category'], categoryFont)}>{category}</div>
             </div>
         </div>
     )
 }
-
 
 ProjectBlock.defaultProps = {
     title: 'Untitled Project but the title is really long',
@@ -25,6 +26,9 @@ ProjectBlock.defaultProps = {
     width: '400px',
     height:'400px',
     padding: '20px',
+
+    titleFont: '',
+    categoryFont: '',
 }
 
 ProjectBlock.propTypes = {
@@ -35,6 +39,9 @@ ProjectBlock.propTypes = {
     width: PropTypes.string,
     height: PropTypes.string,
     padding: PropTypes.string,
+
+    titleFont: PropTypes.string,
+    categoryFont: PropTypes.string,
 }
 
 export default ProjectBlock

@@ -1,0 +1,16 @@
+.index-button {
+    text-decoration: none;
+    
+    padding: 0px 5px;
+    cursor: pointer;
+    
+    /* Display text in center */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+  
+.index-button:hover * {
+    color: white;
+}

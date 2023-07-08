@@ -1,0 +1,97 @@
+
+body {
+    background-color: rgb(39, 39, 39);
+    margin: 0 auto;
+    transform-origin: top;
+  }
+  
+  .section-container {
+    
+    position: absolute;
+    width: 100%;
+    top: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    
+  }
+  
+  .section-container > * {
+    width: 80%;
+  }
+
+#home-section {
+    /* Align name and subtitle to center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Height is given by viewport height (uses large viewport to account for mobile menu bar)*/
+    height: 100lvh;
+
+    .text-container {
+        /* Display text in center */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-name {
+        margin: 0;
+        text-align: center;
+    }
+
+    .home-subtitle {
+        text-align: center
+    }
+}
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+}
+  
+#experience-section {
+    display: flex;
+    flex-direction: column;
+}
+  
+#projects-section {
+    /* Align contents down center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+}
+  
+#contact-section {
+    /* element spacing */
+    row-gap: 50px;
+    margin-bottom: 50px;
+  
+    /* element positioning (flexbox) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .body-text {
+        font-size: 20pt;
+        font-family: 'DINMediumRegular';
+        color: rgb(190, 190, 190);
+    }
+      
+    .social-media-subsection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .social-media-subsection > p {
+        padding-bottom: 20px;
+    }    
+}
+  

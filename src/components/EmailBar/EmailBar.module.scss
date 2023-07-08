@@ -20,10 +20,6 @@
 }
 
 .text-field {
-    /* font */
-    font-size: 20pt;
-    font-family: 'DINMediumRegular';
-
     /* select all text on click */
     -webkit-user-select: all;
     -ms-user-select: all;
@@ -58,15 +54,29 @@
     border-style: solid;
     border-right: 2px;
     border-color: rgb(190, 190, 190);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
     
 
     cursor: pointer;
 
-    .icon {
+    * {
+        height: 100%;
+    }
+
+    img {
         /* images scale down to fit */
         object-fit: contain;
-        height: 100%;
-      
+        height: 80%;
+        border-style: solid;
+        border: 4px;
+        border-color: blue;
+
+        box-sizing: border-box;
+
         filter:brightness(74.5%);
     }
 }  
