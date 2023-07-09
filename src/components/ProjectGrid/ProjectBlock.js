@@ -3,19 +3,26 @@ import PropTypes from 'prop-types'
 
 import cx from 'classnames'
 
-const ProjectBlock = ({title, category, technologies, thumbnailSrc, width, height, padding, titleFont, categoryFont, technologiesFont}) => {
+const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, categoryFont, technologiesFont}) => {
     return (
-        
         <div className={styles['project-block']} style={{width: width, height: height}}>
             <div className={styles['thumbnail-area']}>
-                <img src={thumbnailSrc} alt={`${title} - Thumbnail`}></img>
+                <img src={thumbnailSrc} alt={`${project.title} - Thumbnail`}></img>
             </div>
             <div className={styles['caption-area']}>
-                <div className={cx(styles['title'], titleFont)} >{title}</div>
-                <div className={cx(styles['category'], categoryFont)}>{category}</div>
+                <div className={cx(styles['title'], titleFont)} >{project.title}</div>
+
+                <div className={cx(styles['category'], categoryFont)}>
+                    {project.categories.map((category, index) => (
+                        <span key={index}>{category}
+                        {(index < project.categories.length - 1) ? ' | ' : ''}
+                        </span>
+                    ))}
+                </div>
+
                 <div className={cx(styles['technologies'], technologiesFont)}>
-                    {technologies.map((tech) => (
-                        <span className={styles[tech[1]]}>{tech[0]}</span>
+                    {project.technologies.map((tech, index) => (
+                        <span key={index} className={styles[tech[1]]}>{tech[0]}</span>
                     ))}
                 </div>
             </div>
@@ -24,9 +31,8 @@ const ProjectBlock = ({title, category, technologies, thumbnailSrc, width, heigh
 }
 
 ProjectBlock.defaultProps = {
-    title: 'Untitled Project but the title is really long',
-    category: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    technologies: [['Tech A', 'techA'], ['Tech B', 'techB']],
+    project: {},
+
     thumbnailSrc: '',
 
     width: '0px',
@@ -38,9 +44,8 @@ ProjectBlock.defaultProps = {
 }
 
 ProjectBlock.propTypes = {
-    title: PropTypes.string,
-    desc: PropTypes.string,
-    technologies: PropTypes.array,
+    project: PropTypes.object,
+    
     thumbnailSrc: PropTypes.string,
 
     width: PropTypes.string,

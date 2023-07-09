@@ -23,7 +23,7 @@ ContactSiteButton.propTypes = {
     dest: PropTypes.string,
     iconSrc: PropTypes.string,
     text: PropTypes.string,
-    buttonFont: ''
+    buttonFont: PropTypes.string,
 }
 
 export default ContactSiteButton

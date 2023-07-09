@@ -1,5 +1,9 @@
 
-.project-grid{
+.grid-container {
+  width: 100%;
+}
+
+.project-grid {
   display: grid;
 
   /* center grid cells, accounting for padding */
@@ -7,4 +11,22 @@
 
   width: 100%;
 }
-  
+
+.project-filter-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.project-filter-button {
+  color: gray;
+
+  cursor: pointer;
+}
+
+.project-filter-button-applied {
+  color: white;
+
+  cursor: pointer;
+}

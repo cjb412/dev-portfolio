@@ -1,15 +1,16 @@
-import IndexBar from './components/IndexBar/IndexBar';
-// import AboutSection from './components/1about/AboutSection';
-// import ExperienceSection from './components/2experience/ExperienceSection';
+import IndexBar from './components/IndexBar/IndexBar'
+
+import projectData from './projects.json'
 import ProjectGrid from "./components/ProjectGrid/ProjectGrid"
 
 import EmailBar from './components/EmailBar/EmailBar'
-
 import ContactSiteButton from './components/ContactSiteButton/ContactSiteButton'
 import liLogo from './graphics/linkedin_icon.png'
 import gitLogo from './graphics/github_icon.png'
 
 const App = () => {
+  console.log(projectData.projects[0])
+  
   return (
     <div className="App">
       <div className='section-container'>
@@ -55,7 +56,7 @@ const App = () => {
               Commodo nulla facilisi nullam vehicula ipsum a arcu. Quam vulputate dignissim suspendisse in. Nisi lacus sed viverra tellus in hac habitasse.
           </div>
 
-          <ProjectGrid projects={['1', '2', '3', '5', '7']} projectWidth={'min(90lvw, 600px)'} gridPadding={'min(22.5lvw, 150px)'} projectTitleFont={'project-title-font'} projectCategoryFont={'project-category-font'} projectTechnologiesFont={'project-technologies-font'}/>
+          <ProjectGrid projects={projectData.projects} projectWidth={'min(90lvw, 400px)'} gridPadding={'min(18lvw, 80px)'} projectTitleFont={'project-title-font'} projectCategoryFont={'project-category-font'} projectTechnologiesFont={'project-technologies-font'}/>
 
         </div>
 

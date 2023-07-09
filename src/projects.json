@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project 1",
+            "categories": ["Web Development", "Game Development"],
+            "technologies": [["C++", "c++"], ["Unity", "unity"], ["HTML", "html"]]
+        },
+        {
+            "id": 2,
+            "title": "Project 2",
+            "categories": ["App Development", "Web Development"],
+            "technologies": [["Python3", "py3"], ["HTML", "html"]]
+        }
+    ]
+}
