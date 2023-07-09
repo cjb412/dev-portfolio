@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import cx from 'classnames'
 
-const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, categoryFont, technologiesFont}) => {
+const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, descriptionFont, technologiesFont}) => {
     return (
         <div className={styles['project-block']} style={{width: width, height: height}}>
             <div className={styles['thumbnail-area']}>
@@ -12,12 +12,8 @@ const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, category
             <div className={styles['caption-area']}>
                 <div className={cx(styles['title'], titleFont)} >{project.title}</div>
 
-                <div className={cx(styles['category'], categoryFont)}>
-                    {project.categories.map((category, index) => (
-                        <span key={index}>{category}
-                        {(index < project.categories.length - 1) ? ' | ' : ''}
-                        </span>
-                    ))}
+                <div className={cx(styles['description'], descriptionFont)}>
+                    {project.description}
                 </div>
 
                 <div className={cx(styles['technologies'], technologiesFont)}>

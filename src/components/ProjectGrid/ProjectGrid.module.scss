@@ -41,12 +41,21 @@
 }
 
 .project-filter-button {
-  color: gray;
   white-space: nowrap;
-
   cursor: pointer;
 }
 
 .applied {
   color: white;
+}
+
+.no-results {
+  width: 100%;
+  height: 20lvh;
+  text-align: center;
+  padding-top: 15lvh;
+  
+  font-family: 'DINMediumRegular';
+  font-size: 24pt;
+  color: rgb(156, 156, 156);
 }

@@ -5,10 +5,10 @@ import styles from "./ProjectGrid.module.scss"
 
 import cx from "classnames"
 
-const ProjectFilter = ({technologyFilters, filterBarFont, filterTagFont, toggleTechnologyFilter, clearFiltersFunc}) => {
+const ProjectFilter = ({technologyFilters, filterHeaderFont, filterTagFont, toggleTechnologyFilter, clearFiltersFunc}) => {
     return (
         <div className={styles["project-filter-bar"]}>
-            <div className={cx(filterBarFont, styles["project-filter-bar-header"])}>
+            <div className={cx(filterHeaderFont, styles["project-filter-bar-header"])}>
                 <div>Filter by Tag:</div>
                 <ClearFiltersButton clearFilters={clearFiltersFunc}/>
             </div>

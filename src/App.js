@@ -56,7 +56,16 @@ const App = () => {
               Commodo nulla facilisi nullam vehicula ipsum a arcu. Quam vulputate dignissim suspendisse in. Nisi lacus sed viverra tellus in hac habitasse.
           </div>
 
-          <ProjectGrid projects={projectData.projects} projectWidth={'min(90lvw, 400px)'} gridPadding={'min(18lvw, 80px)'} projectTitleFont={'project-title-font'} projectCategoryFont={'project-category-font'} projectTechnologiesFont={'project-technologies-font'}/>
+          <ProjectGrid
+            projects={projectData.projects}
+            projectWidth={'min(90lvw, 400px)'}
+            gridPadding={'min(18lvw, 80px)'}
+            filterBarHeaderFont={'project-filter-header-font'}
+            filterBarTagFont={'project-filter-tag-font'}
+            projectTitleFont={'project-title-font'}
+            projectDescriptionFont={'project-description-font'}
+            projectTechnologiesFont={'project-technologies-font'}
+          />
 
         </div>
 

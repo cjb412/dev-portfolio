@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 
+import NoResults from "./NoResults.js"
 import ProjectBlock from "./ProjectBlock.js"
 import styles from './ProjectGrid.module.scss'
 import PropTypes from 'prop-types'
@@ -8,7 +9,7 @@ import PropTypes from 'prop-types'
 import p1 from "../../graphics/project_thumbnail/p1.png"
 import ProjectFilter from "./ProjectFilter.js"
 
-const ProjectGrid = ({projects, projectWidth, gridPadding, projectTitleFont, projectCategoryFont, projectTechnologiesFont}) => {
+const ProjectGrid = ({projects, projectWidth, gridPadding, filterBarHeaderFont, filterBarTagFont, projectTitleFont, projectDescriptionFont, projectTechnologiesFont}) => {
   const [technologyFilters, setTechnologyFilters] = useState (GenerateTechnologyFiltersFromProjectData())
 
   function GenerateTechnologyFiltersFromProjectData ()
@@ -64,17 +65,34 @@ const ProjectGrid = ({projects, projectWidth, gridPadding, projectTitleFont, pro
     return metCriteria
   }
 
+  const GetResults = () =>
+  {
+    var results = []
+    projects.forEach((project) => 
+      {
+        if (DoesProjectMeetFilterCriteria(project))
+        {
+          results.push(<ProjectBlock key={project.id} project={project} thumbnailSrc={p1} width={`${projectWidth}`} height={`${projectWidth}`} titleFont={projectTitleFont} descriptionFont={projectDescriptionFont} technologiesFont={projectTechnologiesFont}/>)
+        }
+      }
+    )
+    
+    if(results.length > 0)
+    {
+      return results
+    } else {
+      return <NoResults />
+    }
+  }
+
   return (
     <div className={styles["grid-container"]}>
-      <ProjectFilter technologyFilters={technologyFilters} filterBarFont={projectCategoryFont} filterTagFont={projectCategoryFont} toggleTechnologyFilter={(e) => {ToggleTechnologyFilter(e)}} clearFiltersFunc={() => {ClearFilters()}}/>
+      <ProjectFilter technologyFilters={technologyFilters} filterHeaderFont={filterBarHeaderFont} filterTagFont={filterBarTagFont} toggleTechnologyFilter={(e) => {ToggleTechnologyFilter(e)}} clearFiltersFunc={() => {ClearFilters()}}/>
 
       <div className={styles['project-grid']} style={{gridTemplateColumns: `repeat(auto-fit, ${projectWidth})`, columnGap: `${gridPadding}`, rowGap: `${gridPadding}`}}>
-          {projects.map((project) => (
-            DoesProjectMeetFilterCriteria(project) ?
-            <ProjectBlock key={project.id} project={project} thumbnailSrc={p1} width={`${projectWidth}`} height={`${projectWidth}`} titleFont={projectTitleFont} categoryFont={projectCategoryFont} technologiesFont={projectTechnologiesFont}/>
-            :
-            ''
-          ))}
+          {
+            GetResults()
+          }
       </div>
     </div>
     
