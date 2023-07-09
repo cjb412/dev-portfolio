@@ -4,22 +4,12 @@ import styles from "./ProjectGrid.module.scss"
 
 import cx from "classnames"
 
-const ProjectFilter = ({categoryFilters, technologyFilters, filterFont, updateCategoryFilters, updateTechnologyFilters}) => {
-    const toggleCategoryFilter = (filterKey) => {
-        var newFilters = new Map()
-
-        categoryFilters.forEach(function(value, key) {
-            filterKey == key ? newFilters.set(key, !value) : newFilters.set(key, value)
-        })
-
-        updateCategoryFilters(newFilters)
-    }
-
+const ProjectFilter = ({technologyFilters, filterFont, updateTechnologyFilters}) => {
     const toggleTechnologyFilter = (filterKey) => {
         var newFilters = new Map()
 
         technologyFilters.forEach(function(value, key) {
-            filterKey == key ? newFilters.set(key, !value) : newFilters.set(key, value)
+            filterKey == key ? newFilters.set(key, [!value[0], value[1]]) : newFilters.set(key, value)
         })
 
         updateTechnologyFilters(newFilters)
@@ -27,24 +17,13 @@ const ProjectFilter = ({categoryFilters, technologyFilters, filterFont, updateCa
 
     return (
         <div className={cx(filterFont, styles["project-filter-bar"])}>
-            <div>
             {
-                Array.from(categoryFilters.keys()).map(
+                Array.from(technologyFilters.keys()).sort().map(
                     (k, i) => (
-                        <ProjectFilterButton key={i} filterName={k} applied={categoryFilters.get(k)} toggleFilterFunc={(filterKey) => toggleCategoryFilter(filterKey)}/>
+                        <ProjectFilterButton key={i} filterName={k} applied={technologyFilters.get(k)[0]} toggleFilterFunc={(filterKey) => toggleTechnologyFilter(filterKey)}/>
                     )
                 )
             }
-            </div>
-            <div>
-            {
-                Array.from(technologyFilters.keys()).map(
-                    (k, i) => (
-                        <ProjectFilterButton key={i} filterName={k} applied={technologyFilters.get(k)} toggleFilterFunc={(filterKey) => toggleTechnologyFilter(filterKey)}/>
-                    )
-                )
-            }
-            </div>
         </div>
     )
 }
