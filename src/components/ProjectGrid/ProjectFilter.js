@@ -1,29 +1,26 @@
+import ClearFiltersButton from "./ClearFiltersButton";
 import ProjectFilterButton from "./ProjectFilterButton";
 
 import styles from "./ProjectGrid.module.scss"
 
 import cx from "classnames"
 
-const ProjectFilter = ({technologyFilters, filterFont, updateTechnologyFilters}) => {
-    const toggleTechnologyFilter = (filterKey) => {
-        var newFilters = new Map()
-
-        technologyFilters.forEach(function(value, key) {
-            filterKey == key ? newFilters.set(key, [!value[0], value[1]]) : newFilters.set(key, value)
-        })
-
-        updateTechnologyFilters(newFilters)
-    }
-
+const ProjectFilter = ({technologyFilters, filterBarFont, filterTagFont, toggleTechnologyFilter, clearFiltersFunc}) => {
     return (
-        <div className={cx(filterFont, styles["project-filter-bar"])}>
-            {
-                Array.from(technologyFilters.keys()).sort().map(
-                    (k, i) => (
-                        <ProjectFilterButton key={i} filterName={k} applied={technologyFilters.get(k)[0]} toggleFilterFunc={(filterKey) => toggleTechnologyFilter(filterKey)}/>
+        <div className={styles["project-filter-bar"]}>
+            <div className={cx(filterBarFont, styles["project-filter-bar-header"])}>
+                <div>Filter by Tag:</div>
+                <ClearFiltersButton clearFilters={clearFiltersFunc}/>
+            </div>
+            <div className={cx(filterTagFont, styles["project-filter-tag-list"])}>
+                {
+                    Array.from(technologyFilters.keys()).sort().map(
+                        (k, i) => (
+                            <ProjectFilterButton key={i} filterName={k} filterCount={technologyFilters.get(k)[1]} applied={technologyFilters.get(k)[0]} toggleFilterFunc={(filterKey) => toggleTechnologyFilter(filterKey)}/>
+                        )
                     )
-                )
-            }
+                }
+            </div>
         </div>
     )
 }

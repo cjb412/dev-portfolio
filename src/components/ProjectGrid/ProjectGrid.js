@@ -29,28 +29,44 @@ const ProjectGrid = ({projects, projectWidth, gridPadding, projectTitleFont, pro
     return techs
   }
 
+  const ToggleTechnologyFilter = (filterKey) => {
+    var newFilters = new Map()
+
+    technologyFilters.forEach(function(value, key) {
+        filterKey == key ? newFilters.set(key, [!value[0], value[1]]) : newFilters.set(key, value)
+    })
+
+    setTechnologyFilters(newFilters)
+  }
+
+  const ClearFilters = () =>
+  {
+    var newFilters = new Map()
+    
+    technologyFilters.forEach(function(value, key) {
+      newFilters.set(key, [false, value[1]])
+    })
+
+    setTechnologyFilters(newFilters)
+  }
+
   function DoesProjectMeetFilterCriteria(project)
   {
-    var filterNotClear = false
+    var metCriteria = true
     Array.from(technologyFilters.keys()).map(
       (k) => {
-          if (technologyFilters.get(k)[0])
+          if (technologyFilters.get(k)[0] && !project.technologies.map((techPair) => ( techPair[0] )).includes(k))
           {
-            filterNotClear = true
+            metCriteria = false
           }
       }
     )
-
-    if(!filterNotClear) return true
-
-    var meet = false
-    project.technologies.map((technology) => {meet = meet || (technologyFilters.has(technology[0]) && technologyFilters.get(technology[0])[0])})
-    return meet
+    return metCriteria
   }
 
   return (
     <div className={styles["grid-container"]}>
-      <ProjectFilter technologyFilters={technologyFilters} filterFont={projectCategoryFont} updateTechnologyFilters={(e) => {setTechnologyFilters(e)}}/>
+      <ProjectFilter technologyFilters={technologyFilters} filterBarFont={projectCategoryFont} filterTagFont={projectCategoryFont} toggleTechnologyFilter={(e) => {ToggleTechnologyFilter(e)}} clearFiltersFunc={() => {ClearFilters()}}/>
 
       <div className={styles['project-grid']} style={{gridTemplateColumns: `repeat(auto-fit, ${projectWidth})`, columnGap: `${gridPadding}`, rowGap: `${gridPadding}`}}>
           {projects.map((project) => (

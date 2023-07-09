@@ -66,6 +66,10 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 25px;
+
+    .body-font {
+        overflow: hidden;
+    }
 }
   
 #contact-section {

@@ -13,20 +13,40 @@
 }
 
 .project-filter-bar {
+  /* Display "Filter by Tag" and tag list in a row */
+  padding: 0 5%;
+}
+
+.project-filter-bar-header {
+  /* Display on opposite sides of view port */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.clear-filter-button {
+  cursor: pointer;
+}
+
+.project-filter-tag-list {
+  /* Tags display evenly-spaced with left padding */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  /* Tag list expands to fill remaining space */
+  flex-grow: 1;
 }
 
 .project-filter-button {
   color: gray;
+  white-space: nowrap;
 
   cursor: pointer;
 }
 
-.project-filter-button-applied {
+.applied {
   color: white;
-
-  cursor: pointer;
 }
