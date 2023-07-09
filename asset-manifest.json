@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dev-portfolio/static/css/main.ed2f1a02.css",
-    "main.js": "/dev-portfolio/static/js/main.c2b45c0a.js",
+    "main.js": "/dev-portfolio/static/js/main.2ce312fe.js",
     "static/js/787.eef0f175.chunk.js": "/dev-portfolio/static/js/787.eef0f175.chunk.js",
     "static/media/MusticaProSemiBold.otf": "/dev-portfolio/static/media/MusticaProSemiBold.b1a800b42a1c7df2493c.otf",
     "static/media/Roadway.ttf": "/dev-portfolio/static/media/Roadway.05182510aa74937fccc5.ttf",
@@ -9,11 +9,11 @@
     "static/media/p1.png": "/dev-portfolio/static/media/p1.1c608fff9ac3df88e4cb.png",
     "index.html": "/dev-portfolio/index.html",
     "main.ed2f1a02.css.map": "/dev-portfolio/static/css/main.ed2f1a02.css.map",
-    "main.c2b45c0a.js.map": "/dev-portfolio/static/js/main.c2b45c0a.js.map",
+    "main.2ce312fe.js.map": "/dev-portfolio/static/js/main.2ce312fe.js.map",
     "787.eef0f175.chunk.js.map": "/dev-portfolio/static/js/787.eef0f175.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ed2f1a02.css",
-    "static/js/main.c2b45c0a.js"
+    "static/js/main.2ce312fe.js"
   ]
 }
