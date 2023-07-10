@@ -1,28 +1,31 @@
 import styles from './ProjectBlock.module.scss'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import cx from 'classnames'
 
 const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, descriptionFont, technologiesFont}) => {
     return (
-        <div className={styles['project-block']} style={{width: width, height: height}}>
-            <div className={styles['thumbnail-area']}>
-                <img src={thumbnailSrc} alt={`${project.title} - Thumbnail`}></img>
-            </div>
-            <div className={styles['caption-area']}>
-                <div className={cx(styles['title'], titleFont)} >{project.title}</div>
-
-                <div className={cx(styles['description'], descriptionFont)}>
-                    {project.description}
+        <Link to={`/dev-portfolio/projects/${project.urlKey}`}>
+            <div className={styles['project-block']} style={{width: width, height: height}}>
+                <div className={styles['thumbnail-area']}>
+                    <img src={thumbnailSrc} alt={`${project.title} - Thumbnail`}></img>
                 </div>
+                <div className={styles['caption-area']}>
+                    <div className={cx(styles['title'], titleFont)} >{project.title}</div>
 
-                <div className={cx(styles['technologies'], technologiesFont)}>
-                    {project.technologies.map((tech, index) => (
-                        <span key={index} className={styles[tech[1]]}>{tech[0]}</span>
-                    ))}
+                    <div className={cx(styles['description'], descriptionFont)}>
+                        {project.description}
+                    </div>
+
+                    <div className={cx(styles['technologies'], technologiesFont)}>
+                        {project.technologies.map((tech, index) => (
+                            <span key={index} className={styles[tech[1]]}>{tech[0]}</span>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -4,13 +4,17 @@
             "id": 1,
             "title": "Project 1",
             "description": ["Description 1"],
-            "technologies": [["C++", "c++"], ["Unity", "unity"], ["HTML", "html"]]
+            "technologies": [["C++", "c++"], ["Unity", "unity"], ["HTML", "html"]],
+
+            "urlKey": "p1"
         },
         {
             "id": 2,
             "title": "Project 2",
             "description": ["Description 2"],
-            "technologies": [["Python3", "py3"], ["HTML", "html"]]
+            "technologies": [["Python3", "py3"], ["HTML", "html"]],
+
+            "urlKey": "p2"
         }
     ]
 }
