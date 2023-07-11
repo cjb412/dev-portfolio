@@ -8,6 +8,8 @@ import ProjectLinkTree from "../components/ProjectLinkTree/ProjectLinkTree";
 import backIcon from "../graphics/back_icon.png";
 import IconButton from "../components/IconButton/IconButton";
 
+import cx from 'classnames'
+
 const ProjectPage = () => {
     const { urlKey } = useParams();
     const filteredProjects = projectData.projects.filter(project => project.urlKey === urlKey);
@@ -24,15 +26,15 @@ const ProjectPage = () => {
                 (project == undefined) ?
                 <div>
                     <div className="header-font">Oops! There's nothing here.</div>
-                    <div className="body-font">The URL you are trying to access doesn't lead to any valid project. Please return to the projects section and select a new project to view.</div>
+                    <div className="body-font">The URL you are trying to access doesn't lead to any valid project. Please return to the projects list and select a new project to view.</div>
                 </div>
                 :
                 <div>
-                    <div className={styles["project-header-text"]}>
+                    <div className={styles["header"]}>
                         <div className="header-font">{project.title}</div>
                         <ProjectLinkTree project={project} buttonFont='project-page-link-font'/>
                     </div>
-                    <div className="body-font">{project.longDescription}</div>
+                    <div className={cx(styles["description"], "body-font")}>{project.longDescription}</div>
                 </div>
                 }
             </div>
