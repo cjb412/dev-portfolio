@@ -1,0 +1,29 @@
+{
+    "experiences": [
+        {
+            "id": 1,
+            "title": "Job 1",
+            "employer": "Employer 1",
+            "date": "xxx 20XX - xxx 20XX",
+            "technologies": ["C++", "Unity", "HTML"],
+
+            "experiencePoints": ["Long Description 1.1",
+                                 "Long Description 1.2"],
+
+            "siteUrl": "https://github.com/cjb412/dev-portfolio"
+        },
+        {
+            "id": 2,
+            "title": "Job 2",
+            "employer": "Employer 2",
+            "date": "xxx 20XX - xxx 20XX",
+            "technologies": ["C++", "Unity", "HTML"],
+
+            "experiencePoints": ["Long Description 2.1",
+                                 "Long Description 2.2",
+                                 "Long Description 2.3"],
+
+            "siteUrl": "https://github.com/cjb412/dev-portfolio"
+        }
+    ]
+}

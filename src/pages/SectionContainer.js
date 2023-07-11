@@ -8,6 +8,9 @@ import IconButton from '../components/IconButton/IconButton'
 import liLogo from '../graphics/linkedin_icon.png'
 import gitLogo from '../graphics/github_icon.png'
 
+import experienceData from '../experience.json'
+import ExperienceList from '../components/ExperienceList/ExperienceList'
+
 const SectionContainer = ({ defaultFilters }) => {
   return (
     <div>
@@ -36,15 +39,14 @@ const SectionContainer = ({ defaultFilters }) => {
         </div>
         */}
         {/* --------------------------- EXPERIENCE SECTION --------------------------- */}
-        {/*
+        {
         <div id='experience-section'>
+
           <h2 className='header-font'>Experience</h2>
-          <div className='body-font'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Commodo nulla facilisi nullam vehicula ipsum a arcu. Quam vulputate dignissim suspendisse in. Nisi lacus sed viverra tellus in hac habitasse.
-          </div>
+          <ExperienceList experiences={experienceData.experiences}/>
+
         </div>
-        */}
+        }
         {/* --------------------------- PROJECT SECTION --------------------------- */}
         <div id='projects-section'>
 

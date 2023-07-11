@@ -1,0 +1,50 @@
+.list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+
+    border-style: dotted;
+    border-color: rgba(195, 255, 0, 0.75);
+}
+
+.container {
+    border-style: dotted;
+    border-color: rgba(205, 134, 63, 0.75);
+
+    width: 70%;
+}
+
+.bar {
+    width: 100%;
+}
+
+.bar-text {
+    border: solid red 2px;
+
+    color: white;
+
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding: 10px;
+    
+    > * {
+        flex-grow: 1;
+
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    > :last-child {
+        justify-content: end;
+    }
+}
+
+.point-list {
+    display: flex;
+    flex-flow: column;
+}
