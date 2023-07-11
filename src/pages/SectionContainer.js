@@ -43,7 +43,7 @@ const SectionContainer = ({ defaultFilters }) => {
         <div id='experience-section'>
 
           <h2 className='header-font'>Experience</h2>
-          <ExperienceList experiences={experienceData.experiences}/>
+          <ExperienceList experiences={experienceData.experiences} barFont={'experience-bar-font'} detailFont={'experience-detail-font'}/>
 
         </div>
         }

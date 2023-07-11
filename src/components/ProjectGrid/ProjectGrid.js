@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 import NoResults from "./NoResults.js"
 import ProjectBlock from "./ProjectBlock.js"
@@ -34,7 +34,7 @@ const ProjectGrid = ({projects, projectWidth, gridPadding, filterBarHeaderFont, 
     var newFilters = new Map()
 
     technologyFilters.forEach(function(value, key) {
-        filterKey == key ? newFilters.set(key, [!value[0], value[1]]) : newFilters.set(key, value)
+        filterKey === key ? newFilters.set(key, [!value[0], value[1]]) : newFilters.set(key, value)
     })
 
     setTechnologyFilters(newFilters)

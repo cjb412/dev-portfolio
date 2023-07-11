@@ -3,44 +3,55 @@ import React from 'react'
 
 import styles from "./ExperienceList.module.scss"
 
-const ExperienceNode = ({ experience, exposed }) => {
-  return (
+import cx from 'classnames'
+
+const ExperienceNode = ({ experience, exposed, barFont, detailFont, setExpandedNode }) => {
+  const toggleExpanded = () => 
+  {
+    if(exposed)
+    {
+        setExpandedNode(undefined)
+    } else {
+        setExpandedNode(experience.id)
+    }
+  }
+  
+    return (
     <div className={styles["container"]}>
-        <div className={styles["bar"]}>
+        <div onClick={() => {toggleExpanded()}} className={styles["bar"]}>
             {
-                (experience == undefined) ? 
+                (experience === undefined) ? 
                 <>
                 No experience given.
                 </>
                 :
-                <div className={styles["bar-text"]}>
-                    <div>
+                <div className={cx(styles["bar-text"], barFont)}>
+                    <div className={styles["bar-side"]}>
                         <span>{experience.title}</span>
+                        <span>-</span>
                         <span>{experience.employer}</span>
                     </div>
 
-                    <div>
+                    <div className={styles["bar-side"]}>
                         <div>{experience.date}</div>
                         {
                             (exposed) ? 
-                            <div>-</div>
+                            <div className={styles["bar-end-symbol"]}>-</div>
                             :
-                            <div>+</div>
+                            <div className={styles["bar-end-symbol"]}>+</div>
                         }
                     </div>
                 </div>
             }
         </div>
         {
-            (experience != undefined && exposed) ?
+            (experience !== undefined && exposed) ?
             <div className={styles["bar-exposed"]}>
                 <div className={styles["point-list"]}>
-                    {
-                        experience.experiencePoints.map((point) =>
-                        (
-                            <span>- {point}</span>
-                        ))
-                    }
+                    {experience.experiencePoints.map((point, i) =>
+                    (
+                         <span key={i} className={detailFont}>- {point}</span>
+                    ))}
                 </div>
             </div>
             :

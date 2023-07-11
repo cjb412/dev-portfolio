@@ -13,7 +13,7 @@ import cx from 'classnames'
 const ProjectPage = () => {
     const { urlKey } = useParams();
     const filteredProjects = projectData.projects.filter(project => project.urlKey === urlKey);
-    const project = (filteredProjects == 0) ? undefined : filteredProjects[0]
+    const project = (filteredProjects === 0) ? undefined : filteredProjects[0]
   
     return (
         <div className={styles["outer-content"]}>
@@ -23,7 +23,7 @@ const ProjectPage = () => {
             
             <div className={styles["inner-content"]}>
                 {
-                (project == undefined) ?
+                (project === undefined) ?
                 <div>
                     <div className="header-font">Oops! There's nothing here.</div>
                     <div className="body-font">The URL you are trying to access doesn't lead to any valid project. Please return to the projects list and select a new project to view.</div>

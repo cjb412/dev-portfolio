@@ -10,7 +10,7 @@ const IconButton = ({buttonHeight, dest, text, iconSrc, buttonFont}) => {
     <Link to={dest} className={styles['link-container']} style={{height: `${buttonHeight}`}}>
         <img src={iconSrc} alt={`${text} Logo`}></img>
         {
-          (text != '') ?
+          (text !== '') ?
           <p className={cx(buttonFont, styles["link-text"])}>{text}</p>
           :
           <></>
