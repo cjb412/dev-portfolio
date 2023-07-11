@@ -4,7 +4,6 @@ import projectData from '../projects.json'
 
 import styles from './ProjectPage.module.scss'
 
-import ReturnToProjects from "../components/ReturnToProjects/ReturnToProjects";
 import ProjectLinkTree from "../components/ProjectLinkTree/ProjectLinkTree";
 import backIcon from "../graphics/back_icon.png";
 import IconButton from "../components/IconButton/IconButton";
