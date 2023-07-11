@@ -4,7 +4,7 @@ import projectData from '../projects.json'
 import ProjectGrid from "../components/ProjectGrid/ProjectGrid"
 
 import EmailBar from '../components/EmailBar/EmailBar'
-import ContactSiteButton from '../components/ContactSiteButton/ContactSiteButton'
+import IconButton from '../components/IconButton/IconButton'
 import liLogo from '../graphics/linkedin_icon.png'
 import gitLogo from '../graphics/github_icon.png'
 
@@ -82,8 +82,8 @@ const SectionContainer = ({ defaultFilters }) => {
 
             <p className="body-font"> You can also visit me on social media: </p>
 
-            <ContactSiteButton dest="" iconSrc={liLogo} alt='LinkedIn Logo' text='LinkedIn' buttonFont='site-button-font'/>
-            <ContactSiteButton dest="" iconSrc={gitLogo} alt='GitHub Logo' text='GitHub' buttonFont='site-button-font'/>
+            <IconButton dest="" iconSrc={liLogo} alt='LinkedIn Logo' text='LinkedIn' buttonFont='site-button-font'/>
+            <IconButton dest="" iconSrc={gitLogo} alt='GitHub Logo' text='GitHub' buttonFont='site-button-font'/>
 
           </div>
         </div>

@@ -1,0 +1,25 @@
+.outer-content {
+    /*
+    border-style: dotted;
+    border-color: rgba(127, 255, 212, 0.5);
+    */
+}
+
+.return-button-container {
+    display: flex;
+    padding-top: max(10px, 1lvh);
+    padding-left: max(10px, 3%)
+}
+
+.inner-content {
+    /*
+    border-style: dotted;
+    border-color: rgba(255, 163, 127, 0.5);
+    */
+    padding: 0 7.5%;
+}
+
+.project-header-text {
+    padding: max(1lvh, 5px);
+    border-bottom: solid rgb(201, 201, 201) 2px;
+}

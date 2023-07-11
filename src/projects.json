@@ -3,18 +3,26 @@
         {
             "id": 1,
             "title": "Project 1",
-            "description": ["Description 1"],
+            "description": "Description 1",
             "technologies": [["C++", "c++"], ["Unity", "unity"], ["HTML", "html"]],
 
-            "urlKey": "p1"
+            "urlKey": "p1",
+            "longDescription": "Long Description 1",
+
+            "gitUrl": "https://github.com/cjb412/dev-portfolio",
+            "siteUrl": null
         },
         {
             "id": 2,
             "title": "Project 2",
-            "description": ["Description 2"],
+            "description": "Description 2",
             "technologies": [["Python3", "py3"], ["HTML", "html"]],
 
-            "urlKey": "p2"
+            "urlKey": "p2",
+            "longDescription": "Long Description 2",
+
+            "gitUrl": null,
+            "siteUrl": "some other url"
         }
     ]
 }

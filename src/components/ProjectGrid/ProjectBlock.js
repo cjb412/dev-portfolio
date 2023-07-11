@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 const ProjectBlock = ({project, thumbnailSrc, width, height, titleFont, descriptionFont, technologiesFont}) => {
     return (
-        <Link to={`/dev-portfolio/projects/${project.urlKey}`}>
+        <Link style={{textDecoration: 'none'}} to={`/dev-portfolio/projects/${project.urlKey}`}>
             <div className={styles['project-block']} style={{width: width, height: height}}>
                 <div className={styles['thumbnail-area']}>
                     <img src={thumbnailSrc} alt={`${project.title} - Thumbnail`}></img>
