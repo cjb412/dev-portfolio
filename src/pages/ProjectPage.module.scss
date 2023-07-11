@@ -1,3 +1,5 @@
+@import '../styles/global.scss';
+
 .outer-content {
     /*
     border-style: dotted;
@@ -21,7 +23,7 @@
 
 .header{
     padding: max(1lvh, 5px);
-    border-bottom: solid rgb(201, 201, 201) 2px;
+    border-bottom: solid $textColorLight 2px;
 }
 
 .description {

@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 .project-block {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,6 @@
   
     border-radius: 2px;
     overflow: hidden;
-    background-color: rgba(255, 0, 0, 0);
 
     cursor: pointer;
 }
@@ -43,7 +44,7 @@
     align-items: stretch;
     row-gap: 5%;
   
-    background-color: rgb(65, 65, 65);
+    background-color: $elementColorLight;
 }
   
 .title {
@@ -81,14 +82,4 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-/* Individual technology colors */
-
-.techA {
-    color: green;
-}
-
-.techB {
-    color: orange;
 }

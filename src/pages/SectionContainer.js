@@ -22,7 +22,7 @@ const SectionContainer = ({ defaultFilters }) => {
 
             <h1 className='home-name name-font'>Chris</h1>
             <h1 className='home-name name-font'>Blank</h1>
-            <p className='home-subtitle subtitle-font'>Software Engineer, Full Stack Developer, Game Dev Hobbyist</p>
+            <p className='home-subtitle subtitle-font'>Software Engineer</p>
 
           </div>
 

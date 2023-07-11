@@ -26,20 +26,19 @@ const ExperienceNode = ({ experience, exposed, barFont, detailFont, setExpandedN
                 </>
                 :
                 <div className={cx(styles["bar-text"], barFont)}>
-                    <div className={styles["bar-side"]}>
+                    <div className={styles["bar-left"]}>
                         <span>{experience.title}</span>
-                        <span>-</span>
                         <span>{experience.employer}</span>
                     </div>
 
-                    <div className={styles["bar-side"]}>
-                        <div>{experience.date}</div>
+                    <div className={styles["bar-right"]}>
                         {
                             (exposed) ? 
                             <div className={styles["bar-end-symbol"]}>-</div>
                             :
                             <div className={styles["bar-end-symbol"]}>+</div>
                         }
+                        <div>{experience.date}</div>
                     </div>
                 </div>
             }

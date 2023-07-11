@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 /*
 @font-face {
   font-family: 'ITCAvantGardeGothicBold';
@@ -41,7 +43,7 @@
     font-size: min(2vw, 20px);
     font-family: 'DINMediumRegular';
     text-transform: uppercase;
-    color: rgb(210, 210, 210);
+    color: $textColorDark;
     text-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
 
@@ -49,7 +51,7 @@
     font-size: min(108pt, 16vmin);
     font-family: 'MusticaProSemiBold';
     text-transform: uppercase;
-    color: white;
+    color: $textColorLight;
 }
 
 .subtitle-font {
@@ -57,62 +59,62 @@
     letter-spacing: 0.175vw;
     font-family: 'Roadway';
     text-transform: uppercase;
-    color: white;
+    color: $textColorLight;
 }
 
 .header-font {
     font-size: 50pt;
     margin: 0pt;
     font-family: 'MusticaProSemiBold';
-    color: white;
+    color: $textColorLight;
 }
 
 .body-font {
     font-size: 20pt;
     font-family: 'DINMediumRegular';
-    color: rgb(190, 190, 190);
+    color: $textColorDark;
 }
 
 .experience-bar-font {
   font-size: 14pt;
   font-family: 'DINMediumRegular';
-  color: rgb(235, 235, 235);
+  color: $textColorLight;
 }
 
 .experience-detail-font {
   font-size: 14pt;
   font-family: 'DINMediumRegular';
-  color: rgb(190, 190, 190);
+  color: $textColorDark;
 }
 
 .project-filter-header-font {
   font-size: 14pt;
   font-family: 'DINMediumRegular';
-  color: rgb(190, 190, 190);
+  color: $textColorLight;
 }
 
 .project-filter-tag-font {
   font-size: 14pt;
   font-family: 'DINMediumRegular';
-  color: rgb(127, 127, 127);
+  color: $textColorDark;
 }
 
 .project-title-font {
     font-size: 24pt;
     font-family: 'DINMediumRegular';
-    color: rgb(255, 255, 255);
+    color: $textColorLight;
 }
 
 .project-description-font {
   font-size: 14pt;
   font-family: 'DINMediumRegular';
-  color: rgb(190, 190, 190);
+  color: $textColorDark;
 }
 
 .project-technologies-font {
   font-size: 12pt;
   font-family: 'DINMediumRegular';
-  color: rgb(142, 142, 142);
+  color: $textColorDark;
 }
 
 .email-font {

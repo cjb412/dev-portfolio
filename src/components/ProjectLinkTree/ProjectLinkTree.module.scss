@@ -1,17 +1,13 @@
+@import '../../styles/global.scss';
 @import url('../../styles/global-fonts.scss'); 
 
 .container {
     width: fit-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
 
-    > *:not(:first-child) {
-        padding-left: 2lvw;
-    }
-
-    > *:not(:last-child) {
-        padding-right: 2lvw;
-        border-right: solid rgb(186, 186, 186) 2px;
+    > * {
+        justify-content: left;
     }
 }

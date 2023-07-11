@@ -1,12 +1,19 @@
+$background: rgb(39, 39, 39);
+$elementColorLighter: rgb(113, 113, 113);
+$elementColorLight: rgb(63, 63, 63);
+$elementColorDark: rgb(45, 45, 45);
+
+$textColorLight: rgb(224, 224, 224);
+$textColorDark: rgb(159, 159, 159);
+$textColorDarker: rgb(127, 127, 127);
 
 body {
-    background-color: rgb(39, 39, 39);
+    background-color: $background;
     margin: 0 auto;
     transform-origin: top;
   }
   
   .section-container {
-    
     position: absolute;
     width: 100%;
     top: 0;
@@ -14,8 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    
   }
   
   .section-container > * {
@@ -82,12 +87,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .body-text {
-        font-size: 20pt;
-        font-family: 'DINMediumRegular';
-        color: rgb(190, 190, 190);
-    }
       
     .social-media-subsection {
         display: flex;

@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 .list {
     padding: 5lvh 0;
 
@@ -9,14 +11,14 @@
 }
 
 .container {
-    width: 70%;
+    width: max(450px, 70%);
 
-    background-color: rgb(45, 45, 45);
+    background-color: $elementColorDark;
     border-radius: 10px;
 }
 
 .bar {
-    background-color: rgb(63, 63, 63);
+    background-color: $elementColorLight;
     border-radius: 10px;
 
     width: 100%;
@@ -26,11 +28,9 @@
 }
 
 .bar-text {
-    color: white;
-
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
     justify-content: space-between;
 
     box-sizing: border-box;
@@ -48,10 +48,16 @@
     }
 }
 
-.bar-side {
+.bar-left {
     display: flex;
-    flex-flow: row nowrap;
-    column-gap: 5%;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.bar-right {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
 }
 
 .bar-end-symbol {
